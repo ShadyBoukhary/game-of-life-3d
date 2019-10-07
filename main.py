@@ -19,7 +19,7 @@ def game_of_life(state):
     live = (neighborHood == 4) * 1
     return state * stay + live
 
-// Execute and draw board
+# Execute and draw board
 if __name__ == "__main__":
     fig = plt.figure()
     ax = fig.gca(projection='3d')
