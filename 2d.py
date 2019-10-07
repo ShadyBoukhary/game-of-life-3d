@@ -2,10 +2,10 @@ import numpy as np
 from scipy import signal
 import pygame 
 
-//set initial width and height of the board
+#set initial width and height of the board
 h, w = 700, 700
 
-//initialize game
+#initialize game
 pygame.init()
 screen = pygame.display.set_mode((w, h))
 
