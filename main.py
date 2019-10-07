@@ -9,6 +9,7 @@ h, w, d = 10, 10, 10
 kernel = np.array([[[1, 1, 1], [1, 1, 1], [1, 1, 1]], [[1, 1, 1], [1, 0, 1], [1, 1, 1]], [[1, 1, 1], [1, 1, 1], [1, 1, 1]]])
 state = (np.random.rand(h, w, d) > 0.5) * 1.0
 
+
 def game_of_life(state):
     neighborHood = ndimage.convolve(state, kernel, mode="constant")
     c2 = (neighborHood == 6) * 1
@@ -17,7 +18,8 @@ def game_of_life(state):
     stay = ((c2 + c3 + c4) > 0) * 1
     live = (neighborHood == 4) * 1
     return state * stay + live
-    
+
+// Execute and draw board
 if __name__ == "__main__":
     fig = plt.figure()
     ax = fig.gca(projection='3d')
